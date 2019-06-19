@@ -1,4 +1,4 @@
-var crpto_currency_port  = process.env.crpto_currency_port
+var cc_api_port  = process.env.cc_api_port
 var keeper_host = process.env.keeper_host
 var keeper_port = process.env.keeper_port
 var express = require('express')
@@ -12,8 +12,8 @@ app.use(require('express-promise')());
 app.post('/getcurrency', function (req, res) {
 getBx().then(function(curs){
 for(var i in curs){
-   for(var j in req.body.focus){
-   if(curs[i].secondary_currency == req.body.focus[j] && curs[i].primary_currency == "THB"){
+   for(var j in req.body.secondary_cur){
+   if(curs[i].secondary_currency == req.body.secondary_cur[j] && curs[i].primary_currency == "THB"){
 	postToKeeper(jsonFormatter(curs[i]))
       }
     }
@@ -35,7 +35,7 @@ function getBx() {
 }
 
 function postToKeeper(json) {
-  url = "http://" +keeper_host + ":" + keeper_port + "/keep_this_data"
+  url = `http://${keeper_host}:${keeper_port}/keep_this_data`
   return rp({
         uri: url,
         headers: {
