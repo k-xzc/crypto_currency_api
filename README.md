@@ -23,7 +23,7 @@ I break the monolith service into 3 micro services
   export cc_api_port=..... <br/>
   export keeper_host=..... <br/>
   export keeper_port=..... <br/>
-  npm install <br/>  
+  npm install <br/>
   node app.js/index.js
 
 # Running with docker 
