@@ -33,5 +33,7 @@ I break the monolith service into 3 micro services
 
 # Running with docker 
 
-docker run -d -e cc_api_port=1234 -e keeper_host=kantz.space -e keeper_port=5678 xezor/crypto_currency_api
-
+`docker run -d -p 1234:1234 -e cc_api_port=1234 \
+-e keeper_host=kantz.space \
+-e keeper_port=5678 xezor/crypto_currency_api
+`
