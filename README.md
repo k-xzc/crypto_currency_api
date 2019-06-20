@@ -18,7 +18,8 @@ I break the monolith service into 3 micro services
 
 # How to run 
   
-  Checkout code from GitHub <br/>
+  git clone https://github.com/kantsuw/crypto_currency_api/ <br/>
+  cd crypto_currency_api </br>
   export cc_api_port=..... <br/>
   export keeper_host=..... <br/>
   export keeper_port=..... <br/>
