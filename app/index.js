@@ -57,4 +57,4 @@ function jsonFormatter(json) {
   }
 }
 
-app.listen(crpto_currency_port, () => console.log(`listening on port ${crpto_currency_port}!`))
+app.listen(cc_api_port , () => console.log(`listening on port ${cc_api_port}!`))
